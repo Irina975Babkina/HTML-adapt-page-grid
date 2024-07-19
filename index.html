@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adapt-page-grid</title>
+    <style>
+         *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+        body {
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            width: 100%;
+            min-width: 300px;
+            grid-template-columns: 1fr minmax(290px, 980px) 1fr;
+            grid-template-rows: repeat(5, auto);
+            margin: 0;
+        }
+        .l1 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            min-width: 5px;
+            display: block;
+            background-color: aquamarine;
+        }
+        .l2 {
+            grid-column: 3/ 4;
+            grid-row: 2 / 3;
+            display: block;
+            min-width: 5px;
+            background-color: aquamarine;
+        }
+        .l3 {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+            display: block;
+            min-width: 5px;
+            background-color: aquamarine;
+        }
+        .l4 {
+            grid-column: 3 / 4;
+            grid-row: 5 / 6;
+            display: block;
+            min-width: 5px;
+            background-color: aquamarine;
+        }
+        .box {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            max-width: 980px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .text-title {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            text-align: center;
+            min-width: 300px;
+            background-color: aquamarine;
+            margin:0;
+        }
+        .news {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .news__part {
+            text-align: center;
+            background-color: rgb(170, 227, 241);
+            padding: 0;
+            margin-top: 10px;
+        }
+        .news_text {
+            text-align: center;
+            margin: 0;
+            padding: 2px;
+            height: auto;
+            min-height: 110px;
+        }
+        .news_buttom {
+            background-color: rgb(56, 180, 234);
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            margin: 0;
+            display: block;
+        }
+        .content-wrapper{
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+        .copy {
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+            font-size: 10px;
+            background-color: aquamarine;
+            padding: 10px 0;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .news {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 5px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><img src="https://i.postimg.cc/3wMVr68c/flowers.jpg" alt="изображение тюльпанов"></div>
+        <div class="l1"></div>
+        <h1 class="text-title">8 марта</h1>
+        <div class="l2"></div>
+        <div class="news">
+            <div class="news__part">
+                <div class="news_text">
+                    <p><b>Новость 1</b></p>
+                    <p>11 забавных фактов о женщинах</p>
+                </div>
+                <div class="news_buttom"><a href="https://www.ru.dormeo.ee/statji/11-zabavnyh-faktov-o-zensinah" title="кликни" target="_blank">Читать далее</a></div>
+            </div>
+            <div class="news__part">
+                <div class="news_text">
+                    <p><b>Новость 2</b></p>
+                    <p>Как выбирать тюльпаны. Полезные советы</p>
+                </div>
+                <div class="news_buttom"><a href="https://semicvetic.com/blog/kak-vybirat-tyulpany-sovety-floristov/" title="кликни" target="_blank">Читать далее</a></div>
+            </div>
+            <div class="news__part">
+                <div class="news_text">
+                    <p><b>Новость 3</b></p>
+                    <p>16 идей лучших подарков на 8 марта</p>
+                </div>
+                <div class="news_buttom"><a href="https://lifehacker.ru/chto-podarit-na-8-marta/" title="кликни" target="_blank">Читать далее</a></div>
+            </div>
+            <div class="news__part">
+                <div class="news_text">
+                    <p><b>Новость 4</b></p>
+                    <p>30 женщин, которые изменили мир</p>
+                </div>
+                <div class="news_buttom"><a href="https://www.thevoicemag.ru/social/world/30-zhenshchin-izmenivshih-mir/" title="кликни" target="_blank">Читать далее</a></div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <h2>Венки из цветов</h2>
+                <p>Ещё в незапамятные времена праздник женщин отмечали в Древнем Риме. Благородные матроны получали подарки и окружались мужской заботой и нежностью. 
+                Невольницы тоже награждались знаками внимания и освобождались от работы. Римлянки надевали праздничные наряды, вплетали в волосы цветы и отправлялись в храм
+                богини Весты, считавшейся покровительницей домашнего очага.</p>
+                <p>По данным Организации Объединенных Наций, начало Международному женскому дню (МЖД) было положено в Америке в 1909 году, когда Социалистическая партия Америки
+                вышла на улицы, чтобы почтить память работниц-швей, протестовавших против бесчеловечных условий труда годом ранее. В России праздник стал официальным 8 
+                марта 1914 года. Сильно позже, в 1975 году, статус официального международного праздника закрепила и Организация Объединенных Наций, благодаря чему он 
+                приобрел известность во всем мире как способ выразить признание женщинам. </p>   
+            </div>          
+            <div class="content">
+                <h2>География</h2>
+                <p>Праздник является официальным не только в Беларуси и России, но и в таких странах, как Афганистан, Армения, Азербайджан, Буркина-Фасо, Камбоджа, Китай 
+                (только для женщин), Куба, Грузия, Гвинея-Бисау, Эритрея, Казахстан, Кыргызстан, Лаос, Мадагаскар (только для женщин), Молдова, Монголия, Черногория, Непал
+                (только для женщин), Таджикистан, Туркменистан, Уганда, Украина, Узбекистан, Вьетнам и Замбия. В этот день по традиции мужчины чествуют своих матерей, жен,
+                подруг, коллег цветами и небольшими подарками. В некоторых странах МЖД имеет статус Дня матери.</p>
+            </div>
+            <div class="content">
+                <h2>Особые ценности</h2>   
+                <p>Всего их 10: справедливость, достоинство, надежда, равенство, сотрудничество, упорство, признательность, уважение, сочувствие и прощение.</p> 
+            </div>
+            <div class="content">
+                <h2>Почему на 8 марта дарят тюльпаны?</h2>
+                <p class="l">8 марта - главный праздник весны, который непременно ассоциируется с тюльпанами. Нежные, изящные и грациозные, они как нельзя лучше подчеркивают женственность и 
+                красоту. Но очень редко мы задумываемся над тем, почему на 8 марта дарят именно тюльпаны? Согласно наиболее распространённой версии, впервые тюльпаны были
+                подарены на Международный женский день в 1973 году. В этот год в газете &#171;Известия&#187; была опубликована фотография мужчины, который держал в руках огромный 
+                букет тюльпанов. Этим мужчиной был Таливалдис Чича, начальник участка сельскохозяйственного предприятия &#171;Ригас зиедс&#187;. В преддверии Международного Женского 
+                Дня, он вырастил около 40 000 тюльпанов, которыми он поздравлял женщин на 8 Марта. Принято считать, что именно с этого времени пошла традиция дарить 
+                тюльпаны на 8 Марта. </p>
+            </div>   
+        </div>
+        <div class="l3"></div>
+        <div class="copy">&copy;Минск2023</div>   
+        <div class="l4"></div>
+    </div>
+</body>
+</html>
